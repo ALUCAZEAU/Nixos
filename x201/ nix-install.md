@@ -1,13 +1,7 @@
----
-Date: 2022-01-02 22:18
-Author: Alexandre LUCAZEAU
-Title: 
-Slug: 
-Tags: 
----
 
-parted /dev/sda -- mklabel msdos
-parted /dev/sda -- mkpart primary 1MiB 512MiB
+
+   parted /dev/sda -- mklabel msdos
+   parted /dev/sda -- mkpart primary 1MiB 512MiB
 parted /dev/sda -- mkpart primary 512MiB -1s
 parted /dev/sda -- set 1 boot on
 parted /dev/sda -- set 2 lvm on
